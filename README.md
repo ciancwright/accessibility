@@ -36,8 +36,7 @@ The following violations need fixing in order to comply.
 | iOS      | 🔴 | 2.3.1 Three Flashes or Below Threshold                         |
 | iOS      | :heavy_exclamation_mark: | 2.4.4 Link Purpose (In Context)                         |
 | iOS      | 🔴 | 3.2.3 Consistent Navigation                         |
-| Android  | :white_circle: | 1.3.1 Info and Relationships                    |
-| Both     | :white_check_mark: | 1.4.3 Contrast (Minimum)                        |                                                                             |
+
 
 ## Technical Failure Notes
 
