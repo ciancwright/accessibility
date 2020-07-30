@@ -35,6 +35,7 @@ The following violations need fixing in order to comply.
 | -------- | ----- | ----------------------------------------------- |
 | iOS      | 🔴 | 2.3.1 Three Flashes or Below Threshold                         |
 | iOS      | :heavy_exclamation_mark: | 2.4.4 Link Purpose (In Context)                         |
+| iOS      | :heavy_exclamation_mark: | 3.2 Predictable                         |
 | iOS      | 🔴 | 3.2.3 Consistent Navigation                         |
 
 
@@ -49,6 +50,9 @@ Also note that these pulses continue when text is on the screen (such as the "Yo
 
 #### 2.4.4
 The purpose of the "How the app works" link is clearly identifiable, however this heading is also present in the "About" section accessed from the Navigation Bar. This information should be grouped together, ideally with the link presented at the bottom of this section within the About screen in the same way other links are presented on this screen. 
+
+#### 3.2
+On the start up screen, important elements appear at the bottom of the screen including requirements before activating the app, privacy and terms of use links and actionable buttons. These follow a logical presentation order, but may present difficulties to users unfamiliar with scroll functionality. Consider placing these buttons outside of the scroll and these important links above the privacy and data information.
 
 #### 3.2.3
 Menu and link options are not consistent throughout the app. From the home screen, the options direct the user to a camera, a self-report and redirect to a link otuside of the app. From the 'About' option on the Navigation Bar, these links redirecting to a website outside of the app are presented differently (in the standard underline and colour change).
