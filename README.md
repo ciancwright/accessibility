@@ -35,17 +35,23 @@ The following violations need fixing in order to comply.
 | -------- | ----- | ----------------------------------------------- |
 | iOS      | 🔴 | 1.1.1 Non-text Content                         |
 | iOS      | 🔴 | 1.3.1 Info and Relationships                         |
+| iOS      | 🔴 | 1.4.4 Resize Text           |
 | iOS      | 🔴 | 2.3.1 Three Flashes or Below Threshold                         |
-| iOS      | :heavy_exclamation_mark: | 2.4.3 Focus Order                                   |
-| iOS      | :heavy_exclamation_mark: | 2.4.4 Link Purpose (In Context)                         |
 | iOS      | 🔴 | 2.4.6 Headings and Labels                         |
-| iOS      | :heavy_exclamation_mark: | Guideline 3.2 Predictable                         |
-| iOS      | :heavy_exclamation_mark: | 3.3.1 Error Identification                         |
 | iOS      | 🔴 | 3.2.3 Consistent Navigation                         |
+| iOS      | 🔴 | 3.2.4 Consistent Identification
 | iOS      | 🔴 | 4.1.2 Name, Role, Value                         |
 
+The following pass the requirements but are at risk of failing.
 
-## Technical Failure Notes
+| Platform | Status | Success Criteria                             |
+| -------- | ----- | ----------------------------------------------- |
+| iOS      | :heavy_exclamation_mark: | 2.4.3 Focus Order                                   |
+| iOS      | :heavy_exclamation_mark: | 2.4.4 Link Purpose (In Context)                         |
+| iOS      | :heavy_exclamation_mark: | Guideline 3.2 Predictable                         |
+| iOS      | :heavy_exclamation_mark: | 3.3.1 Error Identification                         |
+
+## Technical Notes
 
 #### 1.1.1 Non-text Content
 First element on each startup, home and about screen cause screen reader to state "Repeat <number> counts" on first load.
@@ -56,6 +62,9 @@ Home screen pulsing image has large touch area before reporting symptoms. Howeve
 
 #### 1.3.1 Info and Relationships
 "More info", "Read latest advice" and "How the app works" links identifying as a button. Review symptoms date selector identifies as a button.
+
+#### 1.4.4 Resize Text
+Text set to largest causes header on Venue Check In screen to be too close to the Close button causing potential issues for screen readers.
 
 #### 2.3.1 Three Flashes or Below Threshold
 Observed to meet the reqirement of not exceeding three flashes per animation cycle, however the animation repeats therefore exceeding this threshold. Notably, the rate of pulsing changes depending on the condition.
@@ -81,9 +90,10 @@ On the start up screen, important elements appear at the bottom of the screen in
 #### 3.2.3 Consistent Navigation
 Menu and link options are not consistent throughout the app. From the home screen, the options direct the user to a camera, a self-report and redirect to a link otuside of the app. From the 'About' option on the Navigation Bar, these links redirecting to a website outside of the app are presented differently (in the standard underline and colour change).
 
-Similarly, the "More info" option from the top of the home screen navigates to a website outside of the app, but the link is not consistent with links in the "About" screen.
-
 Scrolling on "Select Symptoms" with screen reader active is blocked while the "Cancel" button is in focus. This is the default focus for this screen, and scrolling cannot be performed unless another element is selected.
+
+#### 3.2.4 Consistent Identification
+The "More info" option from the top of the home screen, "Read latest advice" and "How the app works" buttons navigate to a website outside of the app, but are not consistently presented with links in the "About" screen.
 
 #### 3.3.1 Error Identification
 Able to select symptoms and still navigate to "I don't have any of these symptoms".
@@ -132,7 +142,7 @@ Make it easier for users to see and hear content including separating foreground
 | 🔴 |  | A     | [1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)                                           |
 | ⚪️ | ⚪️ | A     | [1.4.2 Audio Control](https://www.w3.org/WAI/WCAG21/quickref/#audio-control)                                         |
 | :white_check_mark: | :white_check_mark: | AA    | [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)                                 |
-| :white_check_mark: | :white_check_mark: | AA    | [1.4.4 Resize text](https://www.w3.org/WAI/WCAG21/quickref/#resize-text)                                             |
+| :heavy_exclamation_mark: | :white_check_mark: | AA    | [1.4.4 Resize text](https://www.w3.org/WAI/WCAG21/quickref/#resize-text)                                             |
 | :white_check_mark: | :white_check_mark: | AA    | [1.4.5 Images of Text](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text)                                       |
 | ⚪️ | ⚪️ | AA    | [1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/quickref/#reflow) (Added in 2.1)                                       |
 | ⚪️ | ⚪️ | AA    | [1.4.11 Non-text Contrast](https://www.w3.org/WAI/WCAG21/quickref/#non-text-contrast) (Added in 2.1)                 |
@@ -208,7 +218,7 @@ Make screens appear and operate in predictable ways.
 | :white_check_mark: |  | A     | [3.2.1 On Focus](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)                                   |
 | :white_check_mark: |  | A     | [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/quickref/#on-input)                                   |
 | 🔴 |  | AA    | [3.2.3 Consistent Navigation](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation)         |
-| :white_check_mark: |  | AA    | [3.2.4 Consistent Identification](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification) |
+| 🔴 |  | AA    | [3.2.4 Consistent Identification](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification) |
 
 #### 3.3 Input Assistance
 Help users avoid and correct mistakes.
