@@ -182,5 +182,5 @@ Maximize compatibility with current and future user agents, including assistive 
 ## Appendix: Reference
 
 - [Mobile Accessibility: How WCAG 2.0 and other W3C/WAI Guidelines Appply to Mobile](https://www.w3.org/TR/mobile-accessibility-mapping)
--[WCAG 2.0 Techniques that Apply to Mobile](https://www.w3.org/WAI/GL/mobile-a11y-tf/MobileTechniques)
+- [WCAG 2.0 Techniques that Apply to Mobile](https://www.w3.org/WAI/GL/mobile-a11y-tf/MobileTechniques)
 - [How to Meet WCAG (Quick Reference)](https://www.w3.org/WAI/WCAG21/quickref)
