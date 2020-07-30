@@ -11,23 +11,12 @@
 
 ## Build details
 
-- iOS build #
+- iOS build Version 3.0
 - Android build #
 
 ## Executive summary
 
-An accessibility report for the NHSx COVID-19 mobile application. The application was assessed against WCAG 2 Mobile Accessibility Guidelines. Full details below in [Appendix I: WCAG 2 Mobile Accessibility Guidelines].
-
-The following violations need fixing in order to comply.
-
-| Platform | Level | Success Criterion                               |
-| -------- | ----- | ----------------------------------------------- |
-| iOS      | 🔴 | 1.1.1 Non-text Content                          |
-| Android  | :white_circle: | 1.3.1 Info and Relationships                    |
-| Both     | :white_check_mark: | 1.4.3 Contrast (Minimum)                        |
-
-
-## Accessibility test results
+An accessibility report for the NHSx COVID-19 mobile application. The application was assessed against WCAG 2 Mobile Accessibility Guidelines. Full details below in [Appendix: Reference].
 
 ### Classification of Issues
 
@@ -36,9 +25,38 @@ The following scoring system was used to indicate the status of the app with reg
 | Status                      | Description                                                                                                                                                                                             |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | :white_check_mark: Pass                  | The app meets the requirement                                                                                                                                                   |
-| 🔴 Fail                  | The app fails to meet the requirement                                                              |
-| ⚪️ (N/A) Not Applicable       | No relevant content was found                                                                                 |
+| :heavy_exclamation_mark: Risk | The app meets the requirement but is at high risk
+| :red_circle: Fail                  | The app fails to meet the requirement                                                              |
+| :white_circle: (N/A) Not Applicable       | No relevant content was found    
 
+The following violations need fixing in order to comply.
+
+| Platform | Status | Success Criteria                             |
+| -------- | ----- | ----------------------------------------------- |
+| iOS      | 🔴 | 2.3.1 Three Flashes or Below Threshold                         |
+| iOS      | :heavy_exclamation_mark: | 2.4.4 Link Purpose (In Context)                         |
+| iOS      | 🔴 | 3.2.3 Consistent Navigation                         |
+| Android  | :white_circle: | 1.3.1 Info and Relationships                    |
+| Both     | :white_check_mark: | 1.4.3 Contrast (Minimum)                        |                                                                             |
+
+## Technical Failure Notes
+
+#### 2.3.1 
+Observed to meet the reqirement of not exceeding three flashes per animation cycle, however the animation repeats therefore exceeding this threshold. Notably, the rate of pulsing changes depending on the condition.
+
+When navigating away from the app (following a link) and back, the animation pulsing is no longer a smooth transition, and instead reflashes and staggers.
+
+Also note that these pulses continue when text is on the screen (such as the "You need to isolate" message). This causes potential issues to users with reading impairment or with visual sensitivity due to the constantly changing colours behind the text.
+
+#### 2.4.4
+The purpose of the "How the app works" link is clearly identifiable, however this heading is also present in the "About" section accessed from the Navigation Bar. This information should be grouped together, ideally with the link presented at the bottom of this section within the About screen in the same way other links are presented on this screen. 
+
+#### 3.2.3
+Menu and link options are not consistent throughout the app. From the home screen, the options direct the user to a camera, a self-report and redirect to a link otuside of the app. From the 'About' option on the Navigation Bar, these links redirecting to a website outside of the app are presented differently (in the standard underline and colour change).
+
+Similarly, the "More info" option from the top of the home screen navigates to a website outside of the app, but the link is not consistent with links in the "About" screen.
+
+## Accessibility Test Results
 ### 1 Perceivable
 Information and user interface components must be presentable to users in ways they can perceive.
 
@@ -111,7 +129,7 @@ Do not design content in a way that is known to cause seizures or physical react
 
 | iOS     | Android | Level | Success Criterion                                                                                                       |
 | ------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------- |
-| ⚪️ | ⚪️ | A     | [2.3.1 Three Flashes or Below Threshold](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)      |
+| 🔴 | ⚪️ | A     | [2.3.1 Three Flashes or Below Threshold](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)      |
 
 ### 2.4 Navigable
 Provide ways to help users navigate, find content, and determine where they are.
@@ -121,7 +139,7 @@ Provide ways to help users navigate, find content, and determine where they are.
 | ⚪️ | ⚪️ | A     | [2.4.1 Bypass Blocks](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)                       |
 | 🔴 | 🔴 | A     | [2.4.2 Page Titled](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)                           |
 | :white_check_mark: | :white_check_mark: | A     | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG21/quickref/#focus-order)                           |
-| :white_check_mark: | :white_check_mark: | A     | [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context) |
+| :heavy_exclamation_mark: | :white_check_mark: | A     | [2.4.4 Link Purpose (In Context)](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context) |
 | ⚪️ | ⚪️ | AA    | [2.4.5 Multiple Ways](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways)                       |
 | :white_check_mark: | :white_check_mark: | AA    | [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels)           |
 | :white_check_mark: | :white_check_mark: | AA    | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible)                       |
@@ -148,13 +166,13 @@ Make text content readable and understandable.
 | :white_check_mark: | :white_check_mark: | AA    | [3.1.2 Language of Parts](https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts) |
 
 #### 3.2 Predictable
-Make Web pages appear and operate in predictable ways.
+Make screens appear and operate in predictable ways.
 
 | iOS   | Android | Level | Success Criterion                                                                                    |
 | ----- | ------- | ----- | ---------------------------------------------------------------------------------------------------- |
 | :white_check_mark: | :white_check_mark: | A     | [3.2.1 On Focus](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)                                   |
 | :white_check_mark: | :white_check_mark: | A     | [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/quickref/#on-input)                                   |
-| :white_check_mark: | :white_check_mark: | AA    | [3.2.3 Consistent Navigation](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation)         |
+| 🔴 | :white_check_mark: | AA    | [3.2.3 Consistent Navigation](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation)         |
 | :white_check_mark: | :white_check_mark: | AA    | [3.2.4 Consistent Identification](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification) |
 
 #### 3.3 Input Assistance
