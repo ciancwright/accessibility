@@ -69,9 +69,9 @@ Text set to largest causes header on Venue Check In screen to be too close to th
 #### 2.3.1 Three Flashes or Below Threshold
 Observed to meet the reqirement of not exceeding three flashes per animation cycle, however the animation repeats therefore exceeding this threshold. Notably, the rate of pulsing changes depending on the condition.
 
-When navigating away from the app (following a link) and back, the animation pulsing is no longer a smooth transition, and instead reflashes and staggers.
+When navigating away from the app (following a link) and back, the animation pulsing is no longer a smooth transition, and instead flashes and staggers.
 
-Also note that these pulses continue when text is on the screen (such as the "You need to isolate" message). This causes potential issues to users with reading impairment or with visual sensitivity due to the constantly changing colours behind the text.
+Also note that these pulses continue when text is on the screen (such as the "You need to isolate" message). This causes potential issues to users with reading impairment or with visual sensitivity due to the constantly changing colours behind the text. In monochrome mode, it is unclear as to what is being conveyed.
 
 #### 2.4.3 Focus Order
 "Cancel" button on Select symptoms screen focus blocks scroll from working unless another element is selected.
